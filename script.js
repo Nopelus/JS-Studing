@@ -47,13 +47,13 @@ let pictures = document.querySelectorAll('img');
 
 pictures.forEach(function(item){
   item.addEventListener('click', function(){
-    alert('ZEBAL ETOT JS SUKA!');
+    alert('YOU HAVE CLICKED ON THE PICTURE!');
   });
 });
 
 let div = document.createElement('div');
   div.classList.add('blacker');
-  div.innerHTML = '<h4>Я в таком шоке от JS, что просто нет слов.</h4>'; // Но безопаснее textContent = 'Я в таком шоке от JS, что просто нет слов.'
+  div.innerHTML = '<h4>New div added by JS</h4>'; // Но безопаснее textContent = 'Я в таком шоке от JS, что просто нет слов.'
   // problemSolving.insertBefore(div, pictures[1]);
 //---------------------------------------------------------------------------------
 
@@ -66,7 +66,7 @@ let problemSolving = document.querySelector('.problem_solving');
 
   problemSolving.addEventListener('click', function(event){
     if(event.target && event.target.matches('IMG')){
-      console.log('ne clickaii!');
+      console.log('Don`t click!');
     }
   });
 
