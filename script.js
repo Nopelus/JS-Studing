@@ -1,10 +1,11 @@
+
 window.addEventListener("load", function loadingFunction() {
 
 
-  var randomNumber = Math.random() * 8;
+  var randomNumber = Math.random() * 5;
   randomNumber = Math.round(randomNumber);
 
-  var buttons = document.querySelectorAll("button");
+  var buttons = document.querySelectorAll("p");
   console.log(randomNumber + 1);
   buttons[randomNumber].style.backgroundColor = "red";
 //-------------------------------------------------------------------------------
@@ -50,10 +51,6 @@ pictures.forEach(function(item){
     alert('YOU HAVE CLICKED ON THE PICTURE!');
   });
 });
-
-let div = document.createElement('div');
-  div.classList.add('blacker');
-  div.innerHTML = '<h4>New div added by JS</h4>'; // Но безопаснее textContent = 'Я в таком шоке от JS, что просто нет слов.'
   // problemSolving.insertBefore(div, pictures[1]);
 //---------------------------------------------------------------------------------
 
@@ -63,11 +60,21 @@ let div = document.createElement('div');
 // });
 //---------------------------------------------------------------------------------
 let problemSolving = document.querySelector('.problem_solving');
-
   problemSolving.addEventListener('click', function(event){
     if(event.target && event.target.matches('IMG')){
       console.log('Don`t click!');
     }
   });
+  //--------------------------------------------------------------------------------
+
+  let elemsP = document.getElementsByClassName('elemP');
+
+  [...elemsP].forEach(function(item,elemsP){
+    item.addEventListener('click', function(){
+      item.style.backgroundColor= 'red';
+    });
+  });
+  //--------------------------------------------------------------------------------
+
 
 });
