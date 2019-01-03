@@ -75,6 +75,12 @@ let problemSolving = document.querySelector('.problem_solving');
     });
   });
   //--------------------------------------------------------------------------------
+let MoveUp = document.getElementById('Up');
+  MoveUp.addEventListener('click', function(){
+    scrollTo(0,0);
+  //scrollBy(0, 200); - allow us move screen focus by x and y 
+  });
+//-----------------------------------------------------------------------------------
 
 
 });
