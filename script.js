@@ -81,6 +81,36 @@ let MoveUp = document.getElementById('Up');
   //scrollBy(0, 200); - allow us move screen focus by x and y 
   });
 //-----------------------------------------------------------------------------------
+// function Users (name,id, sex){
+//   this.name = name;
+//   this.id = id;             -  // ES 5 Format of constructructor, class
+//   this.sex = sex;
+//   this.Greetings = function(){
+//       console.log('Hey, ' + this.name,', your id: ' + this.id, ' and your sex is: ' +this.sex);
+//   };
+// }
+// let jonh = new Users('John','1','Man'),
+//     alice = new Users('Alice','2','Wooman');
+// console.log(jonh);
+// console.log(alice);
+// alice.Greetings();
 
+//-----------------------------------------------------------------------------------
 
+class Users {
+  constructor(name,id,sex) {
+    this.name = name;
+    this.id = id;
+    this.sex = sex;
+  }
+  Greetings(){
+    console.log(`Hey, ${this.name}!`);
+  }
+}
+let jonh = new Users('John','1','Man'),
+    alice = new Users('Alice','2','Wooman');
+console.log(jonh);
+console.log(alice);
+alice.Greetings();
+jonh.Greetings();
 });
